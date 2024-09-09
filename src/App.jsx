@@ -18,7 +18,11 @@ function App() {
   const specialToken = 'ghsdf729'
 
   const preSendHandler = (event) => {
-    event.data.context.skills['actions skill'].skill_variables["Special_Token"] = specialToken;
+    const skillVariables = {"Special_Token": specialToken}
+    // event.data.context.skills['actions skill'].skill_variables.Special_Token = specialToken;
+    event.data.context.skills['actions skill'].skill_variables = skillVariables
+
+    console.log("actions skill", event.data.context.skills['actions skill'])
     console.log("event.data.context", event.data.context)
   }
 
