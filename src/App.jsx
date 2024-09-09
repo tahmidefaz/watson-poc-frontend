@@ -24,8 +24,8 @@ function App() {
 
   return (
     <>
-      <h1>Watson embedding PoC</h1>
-      <p>The token is: {specialToken}</p>
+      <h1>Watson embedded webchat PoC</h1>
+      <p>The special token is: {specialToken}</p>
       <p>Ask the assistant "Show me the token" to verify.</p>
 
       <WebChatContainer config={webChatOptions} onBeforeRender={(instance) => onBeforeRender(instance, setInstance, preSendHandler)}/>
